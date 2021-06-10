@@ -42,7 +42,7 @@
     <div class="q-my-md col">
     <h6 class="q-ma-sm">Step 4: Sample Request to Api</h6>
     <div class="row flex" style="align-items:center;">
-    http::/api-url/<q-input v-model="getSampleUrl" class="col-9"></q-input>
+    http::/api-url/<q-input v-model="getSampleUrl" v-on:keyup.enter="fetchFromApi(getSampleUrl)" class="col-9"></q-input>
     <q-btn @click="fetchFromApi(getSampleUrl)">Go</q-btn>
     </div>
    

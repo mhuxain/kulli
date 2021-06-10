@@ -1,0 +1,48 @@
+.full-height-table {
+
+    /* height or max-height is important */
+    max-height: calc(100vh - 85px);
+  
+    /* bg color is important for th; just specify one */
+    .q-table__top,
+    .q-table__bottom,
+    thead tr:first-child th {
+      background-color: white
+    }
+    thead tr th {
+      position: sticky;
+      position: -webkit-sticky;
+      z-index: 1;
+    }
+    
+    thead tr:first-child th {
+      top: 0;
+    }
+    
+    /* this is when the loading indicator appears */
+    &.q-table--loading thead tr:last-child th {
+      top: 48px;
+    }
+    /* height of all previous header rows */
+}
+
+.sticky-actions tr:hover td:last-child {
+  background-image: linear-gradient(to right, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.7) 15%, rgba(255,255,255,1) 100%,);
+  position: sticky;
+  position: -webkit-sticky;
+  right: 0px;
+}
+
+.new-row-hightlight {
+  -webkit-animation: hightlight-green 3s ease-in;
+  animation: hightlight-green 3s ease-in;
+}
+
+@keyframes hightlight-green {
+  0% {
+    background: #6bdb71;
+  }
+  100% {
+    background: #fff;
+  }
+}

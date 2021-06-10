@@ -1,0 +1,15 @@
+// app global css in SCSS form
+
+.new {
+    -webkit-animation: demo 3s ease-in;
+    animation: demo 3s ease-in;
+  }
+  
+  @keyframes demo {
+    0% {
+      background: #6bdb71;
+    }
+    100% {
+      background: #fff;
+    }
+  }

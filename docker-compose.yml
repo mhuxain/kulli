@@ -1,0 +1,20 @@
+version: "3"
+services: 
+    mrc:
+        container_name: "mrc"
+        image: aas_php80_fpm_apache24
+        build:
+            context: .docker/
+            dockerfile: phpfpm.Dockerfile
+        volumes:
+            - ./backend:/var/www/app
+            - ./.docker/app.conf:/etc/apache2/sites-available/000-default.conf:ro
+        # command: /start.sh
+        ports: 
+            - 8092:80
+        # user: user
+        working_dir: /var/www/app
+networks:
+    default:
+        external:
+            name: px
